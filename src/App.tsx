@@ -11,6 +11,7 @@ import {
 } from './components/Section';
 
 import {Button} from './components/Button';
+import InfoIcon from './components/Info';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
                   <span>Add to cart</span> <hr /> <span>$50.00</span>
                 </Button>
                 <Button className="subscribe btn-w-line">
+                  <InfoIcon className="icon" />
                   <span>Subscribe</span> <hr /> <span>$42.50</span>
                 </Button>
               </CardFooter>
@@ -62,6 +64,7 @@ function App() {
                   <span>Add to cart</span> <hr /> <span>$50.00</span>
                 </Button>
                 <Button className="subscribe btn-w-line">
+                  <InfoIcon className="icon" />
                   <span>Subscribe</span> <hr /> <span>$42.50</span>
                 </Button>
               </CardFooter>
@@ -82,6 +85,7 @@ function App() {
                   <span>Add to cart</span> <hr /> <span>$50.00</span>
                 </Button>
                 <Button className="subscribe btn-w-line">
+                  <InfoIcon className="icon" />
                   <span>Subscribe</span> <hr /> <span>$42.50</span>
                 </Button>
               </CardFooter>

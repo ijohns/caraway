@@ -38,6 +38,15 @@ a:hover {
   color: #535bf2;
 }
 
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  margin: 0 0 0.5rem;
+}
+
 body {
   font-size: 16px;
   margin: 0;
@@ -56,39 +65,6 @@ body {
   }
 }
 
-.lime {
-  background-color: var(--lime);
-}
-
-.bg {
-  background-color: var(--section-bg);
-}
-
-.btn {
-  font-family: 'Open Sans', sans-serif;
-  color: var(--btn-color);
-  background-color: var(--btn-background);
-  border: none;
-  box-shadow: 0.1em 0.1em 3px 1px rgba(0, 0, 0, 0.1),
-    0.4em 0.4em 0 var(--btn-hover-offset);
-  text-decoration: none;
-  transition: all 0.45s;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  border-radius: 9999px;
-  padding: 0.5em 2.5em;
-  font-size: 3rem;
-}
-
-.btn:hover {
-  color: var(--btn-background);
-  background-color: var(--btn-hover-offset);
-  border: none;
-  box-shadow: 0.1em 0.1em 5px 2px rgba(0, 0, 0, 0.1),
-    -0.6em -0.35em 0 var(--btn-background);
-  transform: translate(10px, 10px);
-}
-
 .product-cards {
   display: flex;
   flex-wrap: wrap;
@@ -96,21 +72,8 @@ body {
   justify-content: center;
 }
 
-.card-yellow {
-  --accent-color: var(--yellow-pastel);
-}
-
-.card-blue {
-  --accent-color: var(--turquoise);
-}
-
-.card-pink {
-  --accent-color: var(--rose);
-}
-
 .card {
   background-color: #fff;
-  max-width: 300px;
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
@@ -118,6 +81,12 @@ body {
   position: relative;
   z-index: 1;
   transition: all 0.25s;
+}
+
+@media (min-width: 640px) {
+  .card {
+    max-width: 300px;
+  }
 }
 
 .card::after {
@@ -144,6 +113,7 @@ body {
 
 .card-image {
   display: grid;
+  overflow: hidden;
 }
 
 .card-image > * {
@@ -166,18 +136,22 @@ body {
   padding: 1rem  1rem 1rem;
 }
 
+.card-yellow {
+  --accent-color: var(--yellow-pastel);
+}
+
+.card-blue {
+  --accent-color: var(--turquoise);
+}
+
+.card-pink {
+  --accent-color: var(--rose);
+}
+
 .product-image {
   width: 100%;
   margin: 0 auto;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin: 0 0 0.5rem;
-}
-
-p {
-  margin: 0 0 0.5rem;
+  margin-top: -40px; /* find better way to position image */
 }
 
 .subtitle {
@@ -189,6 +163,37 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.btn {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--btn-color);
+  background-color: var(--btn-background);
+  border: none;
+  box-shadow: 0.1em 0.1em 3px 1px rgba(0, 0, 0, 0.1),
+    0.4em 0.4em 0 var(--btn-hover-offset);
+  text-decoration: none;
+  transition: all 0.45s;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  padding: 0.5em 2.5em;
+  font-size: 1rem;
+}
+
+@media (min-width: 640px) {
+  .btn {
+    font-size: 3rem
+  }
+}
+
+.btn:hover {
+  color: var(--btn-background);
+  background-color: var(--btn-hover-offset);
+  border: none;
+  box-shadow: 0.1em 0.1em 5px 2px rgba(0, 0, 0, 0.1),
+    -0.6em -0.35em 0 var(--btn-background);
+  transform: translate(10px, 10px);
 }
 
 .btn-outline {
@@ -229,12 +234,25 @@ p {
 
 .btn-w-line > hr {
   border: 0 none;
-  height: 1px; /* Set the desired height of the line */
-  background-color: black; /* Or any other color */
-  width: 100%; /* Initially make it fill the container */
-  resize: horizontal; /* Make it resizable in the horizontal direction */
+  height: 1px; 
+  background-color: black;
+  width: 100%; 
+  resize: horizontal;
 }
 
 .btn-outline:hover > hr {
   filter: invert(1);
+}
+
+.lime {
+  background-color: var(--lime);
+}
+
+.bg {
+  background-color: var(--section-bg);
+}
+
+.icon {
+  width: 4em;
+  height: auto;
 }
