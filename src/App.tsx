@@ -4,7 +4,7 @@ import {
   CardImage, 
   CardContent, 
   CardFooter
-} from './components/card';
+} from './components/Card';
 
 import {
   Section
