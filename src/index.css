@@ -107,8 +107,14 @@ body {
 
 .card:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  transform: perspective(500px) translateZ(10px);
+  transform: perspective(350px) translateZ(10px);
+}
+
+@media (min-width: 640px) {
+  .card:hover {
+    width: 350px;
+    transform: perspective(500px) translateZ(10px);
+  }
 }
 
 .card-image {
